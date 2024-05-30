@@ -25,22 +25,18 @@ find file 'install.sh'
 ----
 
 **Open a terminal**
-Do the following commands
+Following commands
 
+**Contains **
+[,shell]
 ----
-first 'docker volume create mdb1'
-----
-
-----
-second 'docker build -t kingpancakedb:latest .'
-----
-
-----
-third 'docker run -d \
+docker volume create mdb1
+docker build -t kingpancakedb:latest 
+docker run -d \
     --name myMariaDB \
     -v mdb1:/var/lib/mysql \
     -p 3306:3306 \
-    kingpancakedb:latest'
+    kingpancakedb:latest
 ----
 
 ==== Checking the Logs
@@ -60,9 +56,9 @@ locate file 'remove.sh'
 ---- 
 
 **Contains **
-
+[,shell]
 ----
-[.red]#docker container stop myMariaDB#
+docker container stop myMariaDB
 docker container rm myMariaDB
 docker volume rm mdb1
 ----
