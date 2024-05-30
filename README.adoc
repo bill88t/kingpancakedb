@@ -59,14 +59,10 @@ do 'docker logs -f myMariaDB'
 locate file 'remove.sh'
 ---- 
 
+**Contains **
+[,sh]
 ----
-do 'docker container stop myMariaDB'
-----
-
-----
-do 'docker container rm myMariaDB'
-----
-
-----
-do 'docker volume rm mdb1'
+docker container stop myMariaDB
+docker container rm myMariaDB
+docker volume rm mdb1
 ----
